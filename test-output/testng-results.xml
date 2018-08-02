@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3090" started-at="2018-08-02T21:24:16Z" finished-at="2018-08-02T21:24:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3090" started-at="2018-08-02T21:24:16Z" finished-at="2018-08-02T21:24:19Z">
+      <class name="com.kff.test.StateFactTests">
+        <test-method status="PASS" signature="newAndUpdatedIndicators()[pri:0, instance:com.kff.test.StateFactTests@c5ee75e]" name="newAndUpdatedIndicators" duration-ms="1802" started-at="2018-08-02T21:24:16Z" finished-at="2018-08-02T21:24:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newAndUpdatedIndicators -->
+        <test-method status="PASS" signature="verifyAboutStateHealthFactsLink()[pri:0, instance:com.kff.test.StateFactTests@c5ee75e]" name="verifyAboutStateHealthFactsLink" duration-ms="1264" started-at="2018-08-02T21:24:17Z" finished-at="2018-08-02T21:24:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAboutStateHealthFactsLink -->
+      </class> <!-- com.kff.test.StateFactTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
