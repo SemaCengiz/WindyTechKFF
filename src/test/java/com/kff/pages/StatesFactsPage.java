@@ -17,4 +17,8 @@ public class StatesFactsPage {
 	
 	@FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
 	public WebElement cookieAcceptButton;
+	
+	@FindBy(xpath="//a[@id='hs-eu-confirmation-button']")
+	public WebElement cookieAcceptButtonStateFacts;
+	
 }

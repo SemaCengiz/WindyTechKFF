@@ -9,7 +9,12 @@ import org.testng.annotations.Test;
 import com.kff.pages.CalculatorPage;
 import com.kff.pages.StatesFactsPage;
 import com.kff.utilities.ConfigReader;
+import com.kff.utilities.ConvertUtilities;
 import com.kff.utilities.Driver;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class StateFactTests {
@@ -21,7 +26,7 @@ public class StateFactTests {
 	@Test
 	public void verifyAboutStateHealthFactsLink() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
-		fact.cookieAcceptButton.click();
+		//fact.cookieAcceptButtonStateFacts.click();
 		fact.aboutStateHealthFactsLink.click();
 		String actualTitle = Driver.getDriver().getTitle();
 		String expectedTitle = "About State Health Facts | The Henry J. Kaiser Family Foundation";
@@ -32,11 +37,27 @@ public class StateFactTests {
 	@Test
 	public void newAndUpdatedIndicators() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
-		fact.cookieAcceptButton.click();
-		List<WebElement> news = Driver.getDriver().findElements(By.xpath("//div[@class='indicators-list']/ul"));
-		System.out.println("size of the list" + news.size());
+		
+		fact.cookieAcceptButtonStateFacts.click();
+		List<String> datesString = new ArrayList<>();
+		for(int i =1; i <20; i++) {
+			datesString.add( Driver.getDriver().findElement(By.xpath("//div[@class='indicators-list']//ul["+i+"]//div/a/p")).getText() );
+		}
+		
+		List<Date> actualDates = new ArrayList<>();
+		for(int i=0; i < datesString.size(); i++) {
+			actualDates.add( ConvertUtilities.convertStringToDate( datesString.get(i) ));
+		}
+		
+		List<Date> sortedDates = new ArrayList<>(actualDates);
+		Collections.sort(sortedDates);
+		Collections.reverse(sortedDates);
+		
+		assertEquals(actualDates, sortedDates, "Dates are not in descending order");
+		
 	}
 		
+	
 		
 	
 	
