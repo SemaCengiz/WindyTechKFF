@@ -1,6 +1,9 @@
 package com.kff.pages;
 
+
+
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -13,6 +16,18 @@ public class CalculatorPage {
 		PageFactory.initElements(driver, this);
 	}
 
+
+	@FindBy(name="income-type")
+	public WebElement incomeAs;
+	
+	@FindBy(xpath="//select[@name='income-type']/option")
+	public WebElement option2018Dollars;
+	
+	@FindBy(xpath="//select[@name='income-type']/option[2]")
+	public WebElement optionpercentOfPoverty;
+	
+	@FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
+	public WebElement cookieAcceptButton;
 		
 
 	
@@ -29,5 +44,6 @@ public class CalculatorPage {
 	@FindBy(xpath="//*[@id=\"hs-eu-confirmation-button\"]")
 	public WebElement cookie;
 	
+
 
 }

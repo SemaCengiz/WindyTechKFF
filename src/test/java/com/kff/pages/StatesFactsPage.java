@@ -1,5 +1,7 @@
 package com.kff.pages;
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +15,17 @@ WebDriver driver = Driver.getDriver();
 		PageFactory.initElements(driver, this);
 	}
 
+
+	@FindBy(xpath="//div[@class='inner']/ul/li/a")
+	public WebElement aboutStateHealthFactsLink;
+	
+	@FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
+	public WebElement cookieAcceptButton;
+	
+	@FindBy(xpath="//a[@id='hs-eu-confirmation-button']")
+	public WebElement cookieAcceptButtonStateFacts;
+	
+
 	 
 			
 		  
@@ -25,4 +38,5 @@ WebDriver driver = Driver.getDriver();
 		@FindBy(xpath="//*[@class=\"datamaps-subunit MN\"]")
 		public WebElement Minnesota;
 		
+
 }
