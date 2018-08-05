@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6374" started-at="2018-08-04T23:56:01Z" finished-at="2018-08-04T23:56:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6374" started-at="2018-08-04T23:56:01Z" finished-at="2018-08-04T23:56:08Z">
+      <class name="com.kff.test.StateFactTests">
+        <test-method status="PASS" signature="MapTest()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="MapTest" duration-ms="5102" started-at="2018-08-04T23:56:01Z" finished-at="2018-08-04T23:56:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MapTest -->
+        <test-method status="PASS" signature="SearchBoxTest()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="SearchBoxTest" duration-ms="1230" started-at="2018-08-04T23:56:06Z" finished-at="2018-08-04T23:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchBoxTest -->
+      </class> <!-- com.kff.test.StateFactTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
