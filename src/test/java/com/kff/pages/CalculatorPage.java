@@ -28,6 +28,7 @@ public class CalculatorPage {
 	
 	@FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
 	public WebElement cookieAcceptButton;
+	
 		
 
 	
@@ -44,6 +45,28 @@ public class CalculatorPage {
 	@FindBy(xpath="//*[@id=\"hs-eu-confirmation-button\"]")
 	public WebElement cookie;
 	
-
+    @FindBy(linkText="embed instructions")
+    public WebElement embedInstructions;
+    
+    @FindBy(name="income")
+    public WebElement houseHoldIncome;
+    
+    @FindBy(xpath = "//p[@class='buttons']/input[2]")
+    public WebElement submitButton;
+    
+    @FindBy(xpath="//p[@class='form-message']")
+    public WebElement warningAfterSubmit;
+    
+    @FindBy(xpath="//select[@name='employer-coverage']")
+    public WebElement yesOrNoDropDown;
+    
+    @FindBy(xpath="//select[@name='employer-coverage']/option[contains(text(),'No')]")
+    public WebElement no;
+    
+    @FindBy(xpath="//select[@name='employer-coverage']/option[contains(text(),'Yes')]")
+    public WebElement yes;
+    
+    @FindBy(xpath="//*[@id=\"subsidy-calculator-new\"]/div[1]/h1")
+    public WebElement calcTitle;
 
 }
