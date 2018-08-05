@@ -20,7 +20,7 @@ public class Driver {
 			WebDriverManager.firefoxdriver().setup();
 			driver= new FirefoxDriver();
 			break;
-		case "Chrome":
+		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver= new ChromeDriver();
 			break;
@@ -30,6 +30,7 @@ public class Driver {
 			driver= new InternetExplorerDriver();
 			break;
 		}}
+		driver.manage().window().fullscreen();
 		return driver;
 	}
 	public static  void closeDriver() {
