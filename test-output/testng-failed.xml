@@ -8,6 +8,11 @@
           <include name="SelectStateBtn"/>
         </methods>
       </class> <!-- com.kff.test.StateFactTests -->
+      <class name="com.kff.test.CalculatorTests">
+        <methods>
+          <include name="yesOrNoDropDown"/>
+        </methods>
+      </class> <!-- com.kff.test.CalculatorTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

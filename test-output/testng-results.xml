@@ -12,6 +12,20 @@
           </reporter-output>
         </test-method> <!-- SelectStateBtn -->
       </class> <!-- com.kff.test.StateFactTests -->
+
+<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3013" started-at="2018-08-05T01:41:58Z" finished-at="2018-08-05T01:42:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3013" started-at="2018-08-05T01:41:58Z" finished-at="2018-08-05T01:42:01Z">
+      <class name="com.kff.test.CalculatorTests">
+        <test-method status="PASS" signature="yesOrNoDropDown()[pri:0, instance:com.kff.test.CalculatorTests@5733f295]" name="yesOrNoDropDown" duration-ms="2982" started-at="2018-08-05T01:41:58Z" finished-at="2018-08-05T01:42:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- yesOrNoDropDown -->
+      </class> <!-- com.kff.test.CalculatorTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
