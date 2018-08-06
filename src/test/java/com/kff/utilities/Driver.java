@@ -14,6 +14,7 @@ public class Driver {
 	
 	private static WebDriver driver;
 	public static WebDriver getDriver() {
+		
 		if (driver==null) {
 		switch(ConfigReader.getProperties("browser")) {
 		case "firefox":

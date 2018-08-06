@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-
-      <class name="com.kff.test.StateFactTests">
-        <methods>
-          <include name="verifyAboutStateHealthFactsLink"/>
-        </methods>
-      </class> <!-- com.kff.test.StateFactTests -->
-
       <class name="com.kff.test.CalculatorTests">
         <methods>
-          <include name="accordionMenuTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testCase1210"/>
+          <include name="setUpTest"/>
+          <include name="enterIncomeFunctionality"/>
+          <include name="tearDownTest"/>
         </methods>
       </class> <!-- com.kff.test.CalculatorTests -->
-
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,6 +2,8 @@ package com.kff.pages;
 
 
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,4 +41,23 @@ WebDriver driver = Driver.getDriver();
 		public WebElement Minnesota;
 		
 
+		
+		//Test case 1210 WebElemnts by Guldana
+		@FindBy(id = "search-field")
+		public WebElement mainSearchBtnOnKFF;
+		
+		
+		@FindBy(id="search-submit")
+		public WebElement searchSubmitBtn;
+		
+		
+		@FindBy(xpath="//div[@class='box']//section[@class='search-results-wrapper']//a")
+		public List<String> hivSearchResults;	
+		
+		
+		
+		
+		
+		
+		
 }

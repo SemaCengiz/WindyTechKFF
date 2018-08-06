@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3780" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:53Z">
+  <suite started-at="2018-08-06T19:34:38Z" name="Default suite" finished-at="2018-08-06T19:34:45Z" duration-ms="6446">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3780" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:53Z">
-      <class name="com.kff.test.StateFactTests">
-        <test-method status="PASS" signature="newAndUpdatedIndicators()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="newAndUpdatedIndicators" duration-ms="2512" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:51Z">
+    <test started-at="2018-08-06T19:34:38Z" name="Default test" finished-at="2018-08-06T19:34:45Z" duration-ms="6446">
+      <class name="com.kff.test.CalculatorTests">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.kff.test.CalculatorTests@7e46d648]" started-at="2018-08-06T19:34:38Z" name="setUpTest" finished-at="2018-08-06T19:34:40Z" duration-ms="2023" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newAndUpdatedIndicators -->
-        <test-method status="PASS" signature="verifyAboutStateHealthFactsLink()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="verifyAboutStateHealthFactsLink" duration-ms="1248" started-at="2018-08-03T17:19:51Z" finished-at="2018-08-03T17:19:53Z">
+        </test-method> <!-- setUpTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.kff.test.CalculatorTests@7e46d648]" started-at="2018-08-06T19:34:40Z" name="setUp" finished-at="2018-08-06T19:34:41Z" duration-ms="978" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAboutStateHealthFactsLink -->
-
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="3176" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="3176" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
-      <class name="com.kff.test.StateFactTests">
-        <test-method status="PASS" signature="MapTest()[pri:0, instance:com.kff.test.StateFactTests@435fb7b5]" name="MapTest" duration-ms="3121" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
+        </test-method> <!-- setUp -->
+        <test-method signature="testCase1210()[pri:0, instance:com.kff.test.CalculatorTests@7e46d648]" started-at="2018-08-06T19:34:41Z" name="testCase1210" finished-at="2018-08-06T19:34:44Z" duration-ms="3034" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MapTest -->
-
-      </class> <!-- com.kff.test.StateFactTests -->
+        </test-method> <!-- testCase1210 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.kff.test.CalculatorTests@7e46d648]" started-at="2018-08-06T19:34:44Z" name="tearDown" finished-at="2018-08-06T19:34:44Z" duration-ms="93" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCase1210 status=SUCCESS method=CalculatorTests.testCase1210()[pri:0, instance:com.kff.test.CalculatorTests@7e46d648] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.kff.test.CalculatorTests@7e46d648]" started-at="2018-08-06T19:34:44Z" name="tearDownTest" finished-at="2018-08-06T19:34:45Z" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- com.kff.test.CalculatorTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

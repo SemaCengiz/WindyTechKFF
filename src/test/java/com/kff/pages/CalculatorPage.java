@@ -45,5 +45,18 @@ public class CalculatorPage {
 	public WebElement cookie;
 	
 
+	
+	//Test case 1210 WebElemnts
+	@FindBy(name="income")
+	public WebElement  householdIncomeButton;
+	
+	@FindBy(xpath ="//input[@value='Submit']")
+	public WebElement submitBtnOnCalculatorPage;
+	
+	
+	@FindBy(xpath="//h2[text()='Results']")
+	public WebElement resultsSection;
+	
+	
 
 }
