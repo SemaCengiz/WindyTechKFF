@@ -30,6 +30,7 @@ public class Driver {
 			driver= new InternetExplorerDriver();
 			break;
 		}}
+		driver.manage().window().fullscreen();
 		return driver;
 	}
 	public static  void closeDriver() {

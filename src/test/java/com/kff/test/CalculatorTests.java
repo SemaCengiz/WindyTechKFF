@@ -1,6 +1,9 @@
 package com.kff.test;
 
 
+import org.openqa.selenium.support.ui.Select;
+
+
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
@@ -22,6 +25,23 @@ import com.kff.utilities.ConfigReader;
 import com.kff.utilities.Driver;
 
 public class CalculatorTests {
+	StatesFactsPage fact = new StatesFactsPage();
+	CalculatorPage calc = new CalculatorPage();
+
+
+	
+	
+	
+	
+	//1222 verify  is coverageLink "No" selected by default 
+	@Test
+	public void isCoverageSelectNo() {
+		Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+		calc.acceptBtn.click();
+		calc.isCoverageBtn.isSelected();
+		
+		
+		
 
 	StatesFactsPage fact = new StatesFactsPage();
 	CalculatorPage calc = new CalculatorPage();
@@ -40,10 +60,13 @@ public class CalculatorTests {
 		calc.incomeAs.click();
 		assertTrue(calc.option2018Dollars.isDisplayed());
 		assertTrue(calc.optionpercentOfPoverty.isDisplayed());	
+
 	}
 	
 	
 	
+
+=======
 	
 
 
@@ -95,7 +118,6 @@ public void embedInstruction() {
 }
 
 //Test Case 1212
-	@Ignore
 @Test
 public void householdIncomeNegative() {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
@@ -140,6 +162,5 @@ public void yesOrNoDropDown() throws AWTException {
 	
 	
 }
-
 
 }

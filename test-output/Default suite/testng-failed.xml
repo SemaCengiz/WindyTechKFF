@@ -3,11 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+
+      <class name="com.kff.test.StateFactTests">
+        <methods>
+          <include name="SelectStateBtn"/>
+        </methods>
+      </class> <!-- com.kff.test.StateFactTests -->
+
       <class name="com.kff.test.CalculatorTests">
         <methods>
           <include name="yesOrNoDropDown"/>
         </methods>
       </class> <!-- com.kff.test.CalculatorTests -->
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

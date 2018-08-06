@@ -1,8 +1,8 @@
 package com.kff.pages;
 
 
-
 import org.openqa.selenium.WebDriver;
+
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +15,14 @@ public class CalculatorPage {
 	public CalculatorPage() {
 		PageFactory.initElements(driver, this);
 	}
+	
+	//1222
+	@FindBy(xpath="//select[@name='employer-coverage']/option[1]")
+	public WebElement isCoverageBtn;
 
+
+	@FindBy(xpath="//a[@id='hs-eu-confirmation-button']")
+	public WebElement acceptBtn;
 
 	@FindBy(name="income-type")
 	public WebElement incomeAs;
@@ -68,5 +75,6 @@ public class CalculatorPage {
     
     @FindBy(xpath="//*[@id=\"subsidy-calculator-new\"]/div[1]/h1")
     public WebElement calcTitle;
+
 
 }
