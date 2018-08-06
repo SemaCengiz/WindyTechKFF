@@ -5,11 +5,10 @@
     <classes>
       <class name="com.kff.test.CalculatorTests">
         <methods>
+          <include name="isCoverageSelectNo"/>
+          <include name="setUpTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testCase1210"/>
-          <include name="setUpTest"/>
-          <include name="enterIncomeFunctionality"/>
           <include name="tearDownTest"/>
         </methods>
       </class> <!-- com.kff.test.CalculatorTests -->

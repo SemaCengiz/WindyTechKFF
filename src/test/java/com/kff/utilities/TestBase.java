@@ -1,4 +1,4 @@
-package com.kff.test;
+package com.kff.utilities;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -14,9 +14,6 @@ import org.testng.annotations.BeforeTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.kff.utilities.BrowserUtils;
-import com.kff.utilities.ConfigReader;
-import com.kff.utilities.Driver;
 
 public abstract class TestBase {
 
@@ -81,11 +78,12 @@ public abstract class TestBase {
 			extentLogger.skip("Test Case Skipped is " + result.getName());
 		}
 		
-		Driver.closeDriver();
+		//Driver.closeDriver();
 	}
 
 	@AfterTest
 	public void tearDownTest() {
+		
 		report.flush();
 	}
 
