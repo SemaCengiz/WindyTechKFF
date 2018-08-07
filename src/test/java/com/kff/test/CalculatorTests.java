@@ -1,6 +1,9 @@
 package com.kff.test;
 
 
+import org.openqa.selenium.support.ui.Select;
+
+
 import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
@@ -8,10 +11,13 @@ import java.awt.Robot;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -24,13 +30,34 @@ import com.kff.utilities.TestBase;
 
 public class CalculatorTests extends TestBase {
 	
+public class CalculatorTests {
+	StatesFactsPage fact = new StatesFactsPage();
+	CalculatorPage calc = new CalculatorPage();
+
+
+	
+	
+	
+	
+	//1222 verify  is coverageLink "No" selected by default 
+	@Test
+	public void isCoverageSelectNo() {
+		Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+		calc.acceptBtn.click();
+		calc.isCoverageBtn.isSelected();
+		
+		
+		
 
 	StatesFactsPage fact = new StatesFactsPage();
 	CalculatorPage calc = new CalculatorPage();
+	
 
 	
 
 	//1222 verify  is coverageLink "No" selected by default 
+	
+// Test Case 1214
 	@Test
 	public void isCoverageSelectNo() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
@@ -42,6 +69,15 @@ public class CalculatorTests extends TestBase {
 		
 	}
 	
+		calc.cookieAcceptButton.click();
+		assertTrue(calc.incomeAs.isEnabled());
+		assertTrue(calc.option2018Dollars.isSelected(), "2018 Dollars option is not selected");
+		calc.incomeAs.click();
+		assertTrue(calc.option2018Dollars.isDisplayed());
+		assertTrue(calc.optionpercentOfPoverty.isDisplayed());	
+
+	}
+
 @Test
 public void accordionMenuTest() throws InterruptedException {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
@@ -69,11 +105,18 @@ public void accordionMenuTest() throws InterruptedException {
 }
 
 //Test Case 1203
-@Ignore	
 @Test
 public void embedInstruction() {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
 	extentLogger = report.createTest("Positive embed Instruction test");
+ 	
+}
+
+//Test Case 1203
+@Test 
+public void embedInstruction() {
+	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+	
 	calc.cookieAcceptButton.click();
 	calc.embedInstructions.click();
 	
@@ -86,8 +129,27 @@ public void embedInstruction() {
 	extentLogger.pass("verify expected title is is displayed");
 	
 }
+	
+}
 
-
+//Test Case 1212
+@Test
+public void householdIncomeNegative() {
+	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+	
+	calc.cookieAcceptButton.click();
+	
+	calc.houseHoldIncome.sendKeys("abcde");
+	
+	calc.submitButton.click();
+	
+	String actual = calc.warningAfterSubmit.getText();
+	String expected = "Please enter a valid income.";
+	
+	assertEquals(actual, expected);
+	
+	
+}
 
 //Test Case 1221
 	
@@ -101,6 +163,13 @@ public void yesOrNoDropDown() throws AWTException {
 	Robot rob= new Robot();
 	rob.mouseMove(2000, 1);
 
+	calc.cookieAcceptButton.click();
+	
+	Robot rob= new Robot();
+	rob.mouseMove(2000, 1);
+	
+	
+	
 	System.out.println(calc.no.isSelected());
 	
 	
@@ -144,5 +213,10 @@ public void yesOrNoDropDown() throws AWTException {
         calc.resultsSection.isDisplayed();
         extentLogger.pass("verify results Section displayed");
    }
+	
+	
+	
+	
+}
 
 }
