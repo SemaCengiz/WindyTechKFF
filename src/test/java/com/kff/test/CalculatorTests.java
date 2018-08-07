@@ -8,6 +8,9 @@ import static org.testng.Assert.assertTrue;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.util.List;
+import java.util.NoSuchElementException;
+
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,7 +26,10 @@ import com.kff.pages.CalculatorPage;
 import com.kff.pages.StatesFactsPage;
 import com.kff.utilities.ConfigReader;
 import com.kff.utilities.Driver;
+import com.kff.utilities.TestBase;
 
+public class CalculatorTests extends TestBase {
+	
 public class CalculatorTests {
 	StatesFactsPage fact = new StatesFactsPage();
 	CalculatorPage calc = new CalculatorPage();
@@ -48,12 +54,21 @@ public class CalculatorTests {
 	
 
 	
+
+	//1222 verify  is coverageLink "No" selected by default 
 	
 // Test Case 1214
-	@Ignore
 	@Test
-	public void enterIncomeFunctionality() {
+	public void isCoverageSelectNo() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+		
+		extentLogger = report.createTest("Psoitive isCoverageSelectNo test");
+//		calc.acceptBtn.click();
+		calc.isCoverageBtn.isSelected();
+		extentLogger.pass("verify  is coverageLink No selected by default");
+		
+	}
+	
 		calc.cookieAcceptButton.click();
 		assertTrue(calc.incomeAs.isEnabled());
 		assertTrue(calc.option2018Dollars.isSelected(), "2018 Dollars option is not selected");
@@ -62,21 +77,12 @@ public class CalculatorTests {
 		assertTrue(calc.optionpercentOfPoverty.isDisplayed());	
 
 	}
-	
-	
-	
 
-=======
-	
-
-
-
-	@Ignore
 @Test
 public void accordionMenuTest() throws InterruptedException {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
 	
-	
+	extentLogger = report.createTest("Positive accordion Menu Test ");
 	
     calc.aboutThisToolButton.click();
     String actual = calc.aboutThisToolButton.getText();
@@ -94,12 +100,19 @@ public void accordionMenuTest() throws InterruptedException {
  	String actual2 = calc.notesButton.getText();
     String expected2 ="NOTES";
     assertEquals(actual2, expected2);
- 	
+    extentLogger.pass("verify ABOUT THIS TOOL, FREQUENTLY ASKED QUESTIONS, NOTES are dispalyed");
  	
 }
 
 //Test Case 1203
-	@Ignore
+@Test
+public void embedInstruction() {
+	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+	extentLogger = report.createTest("Positive embed Instruction test");
+ 	
+}
+
+//Test Case 1203
 @Test 
 public void embedInstruction() {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
@@ -113,7 +126,9 @@ public void embedInstruction() {
 	String expectedTitle= "Health Insurance Marketplace Calculator Embed Instructions | The Henry J. Kaiser Family Foundation";
 	
 	assertEquals(actualTitle,expectedTitle );
+	extentLogger.pass("verify expected title is is displayed");
 	
+}
 	
 }
 
@@ -142,6 +157,12 @@ public void householdIncomeNegative() {
 public void yesOrNoDropDown() throws AWTException {
 	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
 	
+	extentLogger = report.createTest("Positive yes Or No Drop Down test");
+//	calc.cookieAcceptButton.click();
+	
+	Robot rob= new Robot();
+	rob.mouseMove(2000, 1);
+
 	calc.cookieAcceptButton.click();
 	
 	Robot rob= new Robot();
@@ -157,6 +178,41 @@ public void yesOrNoDropDown() throws AWTException {
 	System.out.println(calc.no.isDisplayed());
 	
 	System.out.println(calc.yes.isDisplayed());
+	extentLogger.pass("verify expexted result is displayed");
+}
+	
+
+//Test Case 1211
+
+	@Test
+	public void householdIncomeNegativeEmpty() {
+		Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+		
+		extentLogger = report.createTest("Positive house hold Income Negative Empty");
+//		calc.cookieAcceptButton.click();
+		calc.houseHoldIncome.sendKeys("");
+		calc.submitButton.click();
+		String actual = calc.warningAfterSubmit.getText();
+		String expected = "Please enter a valid income.";
+		assertEquals(actual, expected);
+		extentLogger.pass("verify expected result is displayed");
+	}
+
+	
+
+    //Test Case 1210 by Guldana
+     @Test 
+     public void testCase1210() {
+   	 
+     Driver.getDriver().get(ConfigReader.getProperties("urlcalculator")); 
+    
+     extentLogger = report.createTest("Positive testCase1210 test");
+     
+        calc.householdIncomeButton.sendKeys("12345");
+        calc.submitBtnOnCalculatorPage.click();
+        calc.resultsSection.isDisplayed();
+        extentLogger.pass("verify results Section displayed");
+   }
 	
 	
 	
