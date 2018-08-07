@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3780" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:53Z">
+  <suite name="Default suite" duration-ms="8903" started-at="2018-08-07T21:44:07Z" finished-at="2018-08-07T21:44:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3780" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:53Z">
-      <class name="com.kff.test.StateFactTests">
-        <test-method status="PASS" signature="newAndUpdatedIndicators()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="newAndUpdatedIndicators" duration-ms="2512" started-at="2018-08-03T17:19:49Z" finished-at="2018-08-03T17:19:51Z">
+    <test name="Default test" duration-ms="8903" started-at="2018-08-07T21:44:07Z" finished-at="2018-08-07T21:44:16Z">
+      <class name="com.kff.test.CalculatorTests">
+        <test-method status="PASS" signature="socialMediaButtonsOnCalculatorPage()[pri:0, instance:com.kff.test.CalculatorTests@1fdfafd2]" name="socialMediaButtonsOnCalculatorPage" duration-ms="8879" started-at="2018-08-07T21:44:07Z" finished-at="2018-08-07T21:44:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newAndUpdatedIndicators -->
-        <test-method status="PASS" signature="verifyAboutStateHealthFactsLink()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="verifyAboutStateHealthFactsLink" duration-ms="1248" started-at="2018-08-03T17:19:51Z" finished-at="2018-08-03T17:19:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAboutStateHealthFactsLink -->
-      </class> <!-- com.kff.test.StateFactTests -->
+        </test-method> <!-- socialMediaButtonsOnCalculatorPage -->
+      </class> <!-- com.kff.test.CalculatorTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

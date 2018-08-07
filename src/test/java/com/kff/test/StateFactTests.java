@@ -26,7 +26,7 @@ public class StateFactTests {
 	@Test
 	public void verifyAboutStateHealthFactsLink() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
-		//fact.cookieAcceptButtonStateFacts.click();
+		//fact.cookieAcceptButtonStateFacts.click();			
 		fact.aboutStateHealthFactsLink.click();
 		String actualTitle = Driver.getDriver().getTitle();
 		String expectedTitle = "About State Health Facts | The Henry J. Kaiser Family Foundation";

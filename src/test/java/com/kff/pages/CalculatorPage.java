@@ -24,4 +24,29 @@ public class CalculatorPage {
 	
 	@FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
 	public WebElement cookieAcceptButton;
+	
+	@FindBy(xpath="//a[@class='facebook']")
+	public WebElement facebook;
+	
+	@FindBy(xpath="//a[@class='twitter']")
+	public WebElement twitter ;
+	
+	@FindBy(xpath="//input[@class='button selected submit']")
+	public WebElement twitterLogo;
+	
+	@FindBy(xpath="//a[@class='email']")
+	public WebElement email ;
+	
+	@FindBy(xpath="//a[@class='linkedin']")
+	public WebElement linkedIn ;
+	
+	@FindBy(className="title li-logo")
+	public WebElement linkedInLogo;
+	
+	@FindBy(xpath="//a[@class='print']")
+	public WebElement print;
+	
+	@FindBy(id="u_0_0")
+	public WebElement facebookLoginButton;
+	
 }

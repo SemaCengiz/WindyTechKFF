@@ -5,8 +5,24 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.testng.Assert;
+
 public class ConvertUtilities {
 
+	public static void verifyWindowTitle(String title) throws InterruptedException {
+		String parent= Driver.getDriver().getWindowHandle();
+		Thread.sleep(2000);
+		for(String handle: Driver.getDriver().getWindowHandles()) {
+			if(!handle.equalsIgnoreCase(parent)) {
+				Driver.getDriver().switchTo().window(handle);
+				break;
+			}
+		}
+		Assert.assertEquals(Driver.getDriver().getTitle(), title);
+		Driver.getDriver().close();
+		Driver.getDriver().switchTo().window(parent);
+	}
+	
 	public static Date convertStringToDate(String string) {
 
 		String newStr = convertStringFormat(string);
