@@ -1,4 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-08-06T23:12:53Z" name="Default suite" finished-at="2018-08-06T23:13:00Z" duration-ms="6769">
+    <groups>
+    </groups>
+    <test started-at="2018-08-06T23:12:53Z" name="Default test" finished-at="2018-08-06T23:13:00Z" duration-ms="6769">
+      <class name="com.kff.test.FiledTests">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:53Z" name="setUpTest" finished-at="2018-08-06T23:12:55Z" duration-ms="1512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:55Z" name="setUp" finished-at="2018-08-06T23:12:56Z" duration-ms="977" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="enterIncomeFunctionality()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:56Z" name="enterIncomeFunctionality" finished-at="2018-08-06T23:12:57Z" duration-ms="1110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterIncomeFunctionality -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:57Z" name="tearDown" finished-at="2018-08-06T23:12:57Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=enterIncomeFunctionality status=SUCCESS method=FiledTests.enterIncomeFunctionality()[pri:0, instance:com.kff.test.FiledTests@7e46d648] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:57Z" name="setUp" finished-at="2018-08-06T23:12:57Z" duration-ms="477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="householdIncomeNegative()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:57Z" name="householdIncomeNegative" finished-at="2018-08-06T23:12:58Z" duration-ms="1126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- householdIncomeNegative -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:58Z" name="tearDown" finished-at="2018-08-06T23:12:58Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=householdIncomeNegative status=SUCCESS method=FiledTests.householdIncomeNegative()[pri:0, instance:com.kff.test.FiledTests@7e46d648] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:58Z" name="setUp" finished-at="2018-08-06T23:12:59Z" duration-ms="458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="householdIncomeNegativeEmpty1()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:12:59Z" name="householdIncomeNegativeEmpty1" finished-at="2018-08-06T23:13:00Z" duration-ms="779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- householdIncomeNegativeEmpty1 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:13:00Z" name="tearDown" finished-at="2018-08-06T23:13:00Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=householdIncomeNegativeEmpty1 status=SUCCESS method=FiledTests.householdIncomeNegativeEmpty1()[pri:0, instance:com.kff.test.FiledTests@7e46d648] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:com.kff.test.FiledTests@7e46d648]" started-at="2018-08-06T23:13:00Z" name="tearDownTest" finished-at="2018-08-06T23:13:00Z" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- com.kff.test.FiledTests -->
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5015" started-at="2018-08-05T01:37:52Z" finished-at="2018-08-05T01:37:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5015" started-at="2018-08-05T01:37:52Z" finished-at="2018-08-05T01:37:57Z">
+      <class name="com.kff.test.StateFactTests">
+        <test-method status="PASS" signature="SelectStateBtn()[pri:0, instance:com.kff.test.StateFactTests@62e6b5c8]" name="SelectStateBtn" duration-ms="4963" started-at="2018-08-05T01:37:52Z" finished-at="2018-08-05T01:37:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectStateBtn -->
+      </class> <!-- com.kff.test.StateFactTests -->
+
 <testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
