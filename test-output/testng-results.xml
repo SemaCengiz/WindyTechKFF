@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+=======
+
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+>>>>>>> 1323e349ab6585ec4f30dc2239ea1e03fc1f7544
   <reporter-output>
   </reporter-output>
   <suite name="Default suite" duration-ms="8903" started-at="2018-08-07T21:44:07Z" finished-at="2018-08-07T21:44:16Z">
@@ -10,8 +15,31 @@
         <test-method status="PASS" signature="socialMediaButtonsOnCalculatorPage()[pri:0, instance:com.kff.test.CalculatorTests@1fdfafd2]" name="socialMediaButtonsOnCalculatorPage" duration-ms="8879" started-at="2018-08-07T21:44:07Z" finished-at="2018-08-07T21:44:16Z">
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- socialMediaButtonsOnCalculatorPage -->
       </class> <!-- com.kff.test.CalculatorTests -->
+=======
+        </test-method> <!-- newAndUpdatedIndicators -->
+        <test-method status="PASS" signature="verifyAboutStateHealthFactsLink()[pri:0, instance:com.kff.test.StateFactTests@bf1ec20]" name="verifyAboutStateHealthFactsLink" duration-ms="1248" started-at="2018-08-03T17:19:51Z" finished-at="2018-08-03T17:19:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAboutStateHealthFactsLink -->
+
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3176" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3176" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
+      <class name="com.kff.test.StateFactTests">
+        <test-method status="PASS" signature="MapTest()[pri:0, instance:com.kff.test.StateFactTests@435fb7b5]" name="MapTest" duration-ms="3121" started-at="2018-08-02T21:45:30Z" finished-at="2018-08-02T21:45:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MapTest -->
+
+      </class> <!-- com.kff.test.StateFactTests -->
+>>>>>>> 1323e349ab6585ec4f30dc2239ea1e03fc1f7544
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

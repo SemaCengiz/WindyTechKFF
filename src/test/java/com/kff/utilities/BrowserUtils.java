@@ -9,8 +9,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.cbt.utilities.Driver;
-
 //import com.cbt.utilities.Driver;
 
 public class BrowserUtils {

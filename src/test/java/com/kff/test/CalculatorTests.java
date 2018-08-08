@@ -1,23 +1,13 @@
 package com.kff.test;
 
 import static org.testng.Assert.assertEquals;
+
 import static org.testng.Assert.assertTrue;
-
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import com.kff.pages.CalculatorPage;
 import com.kff.pages.StatesFactsPage;
-import com.kff.utilities.BrowserUtils;
 import com.kff.utilities.ConfigReader;
 import com.kff.utilities.ConvertUtilities;
 import com.kff.utilities.Driver;
@@ -26,6 +16,7 @@ public class CalculatorTests{
 
 	StatesFactsPage fact = new StatesFactsPage();
 	CalculatorPage calc = new CalculatorPage();
+
 	
 	
 // Test Case 1214
@@ -78,4 +69,33 @@ public class CalculatorTests{
 	    //ConvertUtilities. verifyWindowTitle("LinkedIn");
 	   
 	}
+
+
+
+
+@Test
+public void accordionMenuTest() throws InterruptedException {
+	Driver.getDriver().get(ConfigReader.getProperties("urlcalculator"));
+	
+	
+	
+    calc.aboutThisToolButton.click();
+    String actual = calc.aboutThisToolButton.getText();
+    String expected ="ABOUT THIS TOOL";
+    assertEquals(actual, expected);
+    
+    calc.cookie.click();
+    
+    calc.frequentlyAskedQuestionsButton.click();
+    String actual1 =calc.frequentlyAskedQuestionsButton.getText();
+    String expected1="FREQUENTLY ASKED QUESTIONS";
+    
+    assertEquals(actual1, expected1);
+ 	calc.notesButton.click();
+ 	String actual2 = calc.notesButton.getText();
+    String expected2 ="NOTES";
+    assertEquals(actual2, expected2);
+ 	
+ 	
+}
 }
