@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
+
       <class name="com.kff.test.CalculatorTests">
-=======
+
+      <class name="com.kff.test.CalculatorTests">
+        <methods>
+          <include name="isCoverageSelectNo"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="tearDownTest"/>
 
       <class name="com.kff.test.StateFactTests">
->>>>>>> 1323e349ab6585ec4f30dc2239ea1e03fc1f7544
         <methods>
           <include name="socialMediaButtonsOnCalculatorPage"/>
+
+          <include name="SelectStateBtn"/>
         </methods>
-<<<<<<< HEAD
       </class> <!-- com.kff.test.CalculatorTests -->
-=======
       </class> <!-- com.kff.test.StateFactTests -->
 
       <class name="com.kff.test.CalculatorTests">
         <methods>
-          <include name="accordionMenuTest"/>
+          <include name="yesOrNoDropDown"/>
         </methods>
       </class> <!-- com.kff.test.CalculatorTests -->
 
->>>>>>> 1323e349ab6585ec4f30dc2239ea1e03fc1f7544
+
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,6 +16,7 @@ public class Driver {
 	
 	private static WebDriver driver;
 	public static WebDriver getDriver() {
+		
 		if (driver==null) {
 		switch(ConfigReader.getProperties("browser")) {
 		case "firefox":
@@ -34,6 +35,7 @@ public class Driver {
 		}}
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
+		driver.manage().window().fullscreen();
 		return driver;
 	}
 	public static  void closeDriver() {
