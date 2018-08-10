@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Kff Automation" verbose="2">
+
+	<test name="Regression test">
+
+		<packages>
+
+			<package name="com.kff.test">
+
+			</package>
+			
+		</packages>
+	</test>
+
+</suite>
