@@ -1,4 +1,4 @@
-package com.kff.pages;
+package TestCases;
 
 
 import org.openqa.selenium.WebDriver;
@@ -57,6 +57,7 @@ public class CalculatorPage {
 
   @FindBy(xpath="//div[@id='hs-eu-cookie-confirmation-inner']/div/a")
 	public WebElement cookieAcceptButton;
+
 			
 		
 	    @FindBy(linkText="embed instructions")
@@ -87,34 +88,51 @@ public class CalculatorPage {
 	   @FindBy(xpath="//*[@id=\"subsidy-calculator-new\"]/div[7]/div/dl/dt/a[1]/h5")
 	    public WebElement frequentlyAskedQuestionsButton;
 	
+
 	   @FindBy(xpath="//*[@id=\"hs-eu-confirmation-button\"]")
 	    public WebElement cookie;
 	
-    @FindBy(linkText="embed instructions")
-    public WebElement embedInstructions;
-    
-    @FindBy(name="income")
-    public WebElement houseHoldIncome;
-    
-    @FindBy(xpath = "//p[@class='buttons']/input[2]")
-    public WebElement submitButton;
-    
-    @FindBy(xpath="//p[@class='form-message']")
-    public WebElement warningAfterSubmit;
-    
-    @FindBy(xpath="//select[@name='employer-coverage']")
-    public WebElement yesOrNoDropDown;
-    
-    @FindBy(xpath="//select[@name='employer-coverage']/option[contains(text(),'No')]")
-    public WebElement no;
-    
-    @FindBy(xpath="//select[@name='employer-coverage']/option[contains(text(),'Yes')]")
-    public WebElement yes;
-    
-    @FindBy(xpath="//*[@id=\"subsidy-calculator-new\"]/div[1]/h1")
-    public WebElement calcTitle;
+	@FindBy(xpath="//select[@name='child-count']")
+	public WebElement numberOfChildren;
+	
+	@FindBy(xpath="//select[@name='children[0][age]']")
+	public WebElement numberOfChildrenAge;
+	
+	@FindBy(xpath="//select[@name='children[0][tobacco]']")
+	public WebElement numberOfChildrenTobacco;
+
+	@FindBy(xpath="//select[@name='children[1][age]']")
+	public WebElement numberOfChildrenAge2;
+	
+	@FindBy(xpath="//select[@name='children[1][tobacco]']")
+	public WebElement numberOfChildrenTobacco2;
+	
+	@FindBy(xpath="//select[@name='children[2][age]']")
+	public WebElement numberOfChildrenAge3;
+	
+	@FindBy(xpath="//select[@name='children[2][tobacco]']")
+	public WebElement numberOfChildrenTobacco3;
+	
+	@FindBy(xpath="//p[@class='buttons']/input[1]")
+	public WebElement clearButton;
+	
+	@FindBy(xpath="//div [@ class='box full-post beige subsidy-results-wrapper']/h2")
+	public WebElement submitResultBox;
+	
+	@FindBy(xpath="//input [@value='Submit']")
+	public WebElement submitButton;
+	
+	@FindBy(xpath="//input [@name='income']")
+	public WebElement annualIncome;
+	
+	@FindBy(xpath="//select[@id='state-dd']")
+	public WebElement selectState; 
+	
+	@FindBy(xpath="//input [@name='zip']")
+	public WebElement zipCode;
 
 	
+
 	 //Test case 1210 WebElemnts
 	   @FindBy(name="income")
 	    public WebElement  householdIncomeButton;
@@ -127,5 +145,6 @@ public class CalculatorPage {
 	   public WebElement resultsSection;
 	
 	
+
 
 }

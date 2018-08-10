@@ -1,4 +1,4 @@
-package com.kff.test;
+package TestCases;
 
 import static org.testng.Assert.assertEquals;
 
