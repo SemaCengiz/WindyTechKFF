@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Kff Automation]">
+  <test thread-count="5" verbose="2" name="Regression test(failed)">
+    <classes>
+      <class name="com.kff.test.FieldsTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="householdIncomeNegative"/>
+          <include name="householdIncomeNegativeEmpty"/>
+          <include name="enterIncomeFunctionality"/>
+          <include name="isCoverageSelectNo"/>
+          <include name="clearButtons"/>
+          <include name="tearDown"/>
+          <include name="setUpTest"/>
+          <include name="NumberofChildren"/>
+          <include name="ClearSubmit"/>
+          <include name="householdIncomeFieldEmpty"/>
+          <include name="SelectState"/>
+          <include name="SelectStateNegative"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.kff.test.FieldsTests -->
+      <class name="com.kff.test.StateFactTests">
+        <methods>
+          <include name="MapTest1"/>
+          <include name="testcase1219"/>
+          <include name="setUp"/>
+          <include name="searchBoxNegative"/>
+          <include name="verifyAboutStateHealthFactsLink"/>
+          <include name="tearDown"/>
+          <include name="SearchBoxTest"/>
+          <include name="SelectStateBtn"/>
+          <include name="setUpTest"/>
+          <include name="MapTest"/>
+          <include name="newAndUpdatedIndicators"/>
+          <include name="tearDownTest"/>
+          <include name="verifyStateHealthFactsLink"/>
+        </methods>
+      </class> <!-- com.kff.test.StateFactTests -->
+    </classes>
+  </test> <!-- Regression test(failed) -->
+</suite> <!-- Failed suite [Kff Automation] -->

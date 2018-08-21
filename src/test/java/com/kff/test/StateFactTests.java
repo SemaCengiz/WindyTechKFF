@@ -1,8 +1,7 @@
-package TestCases;
+package com.kff.test;
 
 import static org.testng.Assert.assertEquals;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -14,67 +13,45 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
-
-import static org.testng.Assert.assertTrue;
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 import java.io.IOException;
-
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.Ignore;
-
 import org.testng.annotations.Test;
-
 import com.kff.pages.CalculatorPage;
 import com.kff.pages.StatesFactsPage;
 import com.kff.utilities.ConfigReader;
-
 import com.kff.utilities.Driver;
-
-
 import com.kff.utilities.ConvertUtilities;
-import com.kff.utilities.Driver;
-import com.kff.utilities.TestBase;
-
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.Date;
-import java.util.List;
 import java.util.NoSuchElementException;
 
-public class StateFactTests extends TestBase{
 
-public class StateFactTests {
+public class StateFactTests extends TestBase{
 
 	StatesFactsPage fact = new StatesFactsPage();
 	CalculatorPage calc = new CalculatorPage();
 
-
-	
 	 //verifythe ListLink  1213
 
 	@Test
 	public void verifyStateHealthFactsLink() throws InterruptedException {
 		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
-		fact.acceptBtnCookie.click();
+		//fact.acceptBtnCookie.click();
 		String actualTitle = Driver.getDriver().getTitle();
 		String expectedTitle = "State Health Facts | The Henry J. Kaiser Family Foundation";
 		assertEquals(actualTitle, expectedTitle, "State Health Facts does not working ");
 		Assert.assertTrue(fact.ChooseCategoryText.isDisplayed());
 		
-    List<WebElement> List = Driver.getDriver().findElements
+		List<WebElement> List = Driver.getDriver().findElements
     		(By.xpath("//div[@id='top-left-categories']//li/a"));
-    System.out.println(List.size());
+		System.out.println(List.size());
         for (int i = 0; i < List.size(); i++) {
       	if (List.equals(List.get(i))){
     		assertTrue(List.get(i).isDisplayed());
     		
-    	}
+      		}
         }
-        }
+      }
 	
   
 	//1204 Select State Btn
@@ -118,12 +95,8 @@ public class StateFactTests {
     	assertEquals(actualStateTitle,expectedStateTitle,"Alabama Page is not loaded");
 
     		}
-    	
-		}
-    		
 
-// Test Case 1205	
-	
+// Test Case 1205		
 	@Test
 	public void verifyAboutStateHealthFactsLink() {
 		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
@@ -138,8 +111,6 @@ public class StateFactTests {
 		extentLogger.pass("verify About State Health FactsL ink");
 	}
 	
-
-
 	// Tets Case 1220
 	@Test
 	public void searchBoxNegative() {
@@ -215,23 +186,14 @@ public class StateFactTests {
      extentLogger.pass("verify state names are visible");
 	}
 	
-
     //Test case 1219 
-
     @Test
-    public void testcase1219() {
-    	
+    public void testcase1219() {  	
     	extentLogger = report.createTest("Positive testcase1219 test");
-    	
-   	 Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
-   	 
-  	
-
-   	 fact.mainSearchBtnOnKFF.clear();
-   	 fact.mainSearchBtnOnKFF.sendKeys("hiv");
-   	 fact.searchSubmitBtn.click();
-     
-   
+    	Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
+   	fact.mainSearchBtnOnKFF.clear();
+   	fact.mainSearchBtnOnKFF.sendKeys("hiv");
+   	fact.searchSubmitBtn.click();
    	 List<String> searchResults = new ArrayList<>();
    	 for (int i = 1; i < 10; i++) {
    		String test = Driver.getDriver().findElement(By.xpath("//div[@class='box']//section[@class='search-results-wrapper']//article[" +i+ "]//a")).getText();
@@ -241,9 +203,7 @@ public class StateFactTests {
    	 for(int j=0; j < searchResults.size(); j++) {
    		assertTrue(searchResults.get(j).contains("HIV"),"Search result" + j + "does not include hiv"); 
    		extentLogger.pass("verify all the HIV links are displayed");
-   	 }
-   	 
-   	 
+   	 	}
     }
   //1209
   	@Test
@@ -256,11 +216,8 @@ public class StateFactTests {
   		extentLogger.pass("verify submit button is clickable");
   	}
   	
-  	
-  	
   	//1218
-       @Test
-  	
+    @Test
   	public void MapTest1() {
   		Driver.getDriver().get(ConfigReader.getProperties("urlstate"));
   		extentLogger = report.createTest("Positive MapTest1 test");
@@ -272,30 +229,23 @@ public class StateFactTests {
   		String actual = fact.CathandIndisdesplayed.getText();
   		String expected = "Ohio: Categories and Indicators";
   		assertEquals(actual, expected);
-  		
-  		
-  	  
          
-           Driver.getDriver().navigate().back();
+        Driver.getDriver().navigate().back();
          
   		fact.Alabama.click();
   		String actual1= fact.CathandIndAl.getText();
   		String expected1 = "Alabama: Categories and Indicators";
-  		assertEquals(actual, expected);
+  		assertEquals(actual1, expected1);
   		
   		 Driver.getDriver().navigate().back();
   		fact.NorthCaralina.click();
   		String actual2= fact.CatandIndiNorth.getText();
   		String expected2 = "North Carolina: Categories and Indicators";
-      	assertEquals(actual, expected);	
+      	assertEquals(actual2, expected2);	
   		
       	extentLogger.pass("verify expected texts are displayed");
   		
+  		}
   	}
-  	
-  	}
-  
 
-}
-}
 

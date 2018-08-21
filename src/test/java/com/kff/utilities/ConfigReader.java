@@ -9,7 +9,7 @@ public class ConfigReader {
 
 	static {
 		try {
-			String path = "/Users/Sema/git/WindyTechKFF/Configuration.properties";
+			String path = "./Configuration.properties";
 			FileInputStream input = new FileInputStream(path);
 			configfile = new Properties();
 			configfile.load(input);
