@@ -13,6 +13,12 @@
           <include name="tearDownTest"/>
         </methods>
       </class> <!-- com.kff.test.CalculatorTests -->
+
+      <class name="com.kff.test.StateFactTests">
+        <methods>
+          <include name="MapTest"/>
+        </methods>
+      </class> <!-- com.kff.test.StateFactTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

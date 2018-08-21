@@ -92,4 +92,5 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
   <testcase name="verifyAboutStateHealthFactsLink" time="0.000" classname="com.kff.test.StateFactTests">
     <skipped/>
   </testcase> <!-- verifyAboutStateHealthFactsLink -->
+
 </testsuite> <!-- com.kff.test.StateFactTests -->

@@ -348,6 +348,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.kff.test.CalculatorTests -->
+
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

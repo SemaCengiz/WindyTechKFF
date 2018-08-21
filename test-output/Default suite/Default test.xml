@@ -202,4 +202,5 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
   <testcase name="embedInstruction" time="0.0" classname="com.kff.test.CalculatorTests">
     <skipped/>
   </testcase> <!-- embedInstruction -->
+
 </testsuite> <!-- Default test -->
