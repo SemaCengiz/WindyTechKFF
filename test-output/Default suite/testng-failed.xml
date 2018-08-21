@@ -3,6 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.kff.test.CalculatorTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="setUpTest"/>
+          <include name="embedInstruction"/>
+          <include name="socialMediaButtonsOnCalculatorPage"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- com.kff.test.CalculatorTests -->
+
       <class name="com.kff.test.StateFactTests">
         <methods>
           <include name="MapTest"/>

@@ -14,6 +14,7 @@ public class Driver {
 	
 	private static WebDriver driver;
 	public static WebDriver getDriver() {
+		
 		if (driver==null) {
 		switch(ConfigReader.getProperties("browser")) {
 		case "firefox":
@@ -30,6 +31,7 @@ public class Driver {
 			driver= new InternetExplorerDriver();
 			break;
 		}}
+		driver.manage().window().fullscreen();
 		return driver;
 	}
 	public static  void closeDriver() {
